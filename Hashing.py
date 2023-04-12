@@ -10,7 +10,7 @@ def n_gram(word, n=args.N):
     return s
 
 
-# create list of words in a sentence
+# create N_gram vector given a sentence
 def lst_gram(lst, n=args.N):
     slice = []
     for word in str(lst).lower().split():
@@ -30,10 +30,11 @@ for file in files:
         vocab.extend(lst_gram(s1))
         vocab.extend(lst_gram(s2))
 
-vocab = set(vocab)
+vocab = set(vocab) # clean list to be a non_duplicate set
 vocab_list = ['[PAD]', '[UNK]']
 vocab_list.extend(list(vocab))
 
+# store the list in a separate file
 vocab_file = args.VOCAB_FILE
 with open(vocab_file, 'w', encoding='utf-8') as f:
     for sl in vocab_list:
