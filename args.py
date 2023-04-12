@@ -1,9 +1,9 @@
 # defining variables and reference files needed
-TRAIN_DATA = '/Users/wesley/Desktop/4579_final/MRPC/train_data.csv'
-TEST_DATA = '/Users/wesley/Desktop/4579_final/MRPC/test_data.csv'
+TRAIN_DATA = "/Users/wesley/Documents/GitHub/IEOR4579_Final_Project/Data/train_data.csv"
+TEST_DATA = "/Users/wesley/Documents/GitHub/IEOR4579_Final_Project/Data/test_data.csv"
 
-VOCAB_FILE = '/Users/wesley/Desktop/4579_final/vocab_mrpc.txt'
-MODEL_FILE = './dssm_pr.pkl'
+VOCAB_FILE = '/Users/wesley/Documents/GitHub/IEOR4579_Final_Project/vocab_mrpc.txt'
+MODEL_FILE = '/Users/wesley/Documents/GitHub/IEOR4579_Final_Project/dssm_pr.pkl'
 
 N = 3
 SENTENCE_MAXLEN = 90
