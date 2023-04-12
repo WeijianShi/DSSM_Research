@@ -3,7 +3,7 @@ import pandas as pd
 from Hashing import lst_gram
 import args
 
-
+# build dictionary and assign index to each slice
 def load_vocab():
     vocab = open(args.VOCAB_FILE, encoding='utf-8').readlines()
     slice2idx = {}
@@ -16,7 +16,7 @@ def load_vocab():
         cnt += 1
     return slice2idx, idx2slice
 
-
+# limit all output to be the same length
 def padding(text, maxlen=args.SENTENCE_MAXLEN):
     pad_text = []
     for sentence in text:
@@ -27,11 +27,11 @@ def padding(text, maxlen=args.SENTENCE_MAXLEN):
             pad_sentence[cnt] = index
             cnt += 1
             if cnt == maxlen:
-                break
+                break # break loop if go over maxlen
         pad_text.append(pad_sentence.tolist())
     return pad_text
 
-
+# output list of indexes from dictionary given a line of text 
 def char_index(text_a, text_b):
     slice2idx, idx2slice = load_vocab()
     a_list, b_list = [], []
@@ -43,7 +43,7 @@ def char_index(text_a, text_b):
         # for each slice of the first sentence in each line
         for slice in lst_gram(a_sentence):
 
-            if slice in slice2idx.keys():
+            if slice in slice2idx.keys(): # append index if slice exist in dictionary
                 a.append(slice2idx[slice])
             else:
                 a.append(1)  # for those not in the txt remark it as “UNK”
@@ -62,7 +62,7 @@ def char_index(text_a, text_b):
 
     return a_list, b_list
 
-
+# read lines from file and return lists of indexes
 def load_char_data(filename):
     df = pd.read_csv(filename, sep='\t')
     text_a = df['#1 string'].values
