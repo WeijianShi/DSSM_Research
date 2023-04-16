@@ -1,8 +1,8 @@
 import torch
-from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import DataLoader
 from torch.autograd import Variable
 from Train import MRPCDataset
-import args
+from Our_code import args
 
 if __name__ == '__main__':
     test_data = MRPCDataset(args.TEST_DATA)

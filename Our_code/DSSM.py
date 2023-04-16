@@ -1,9 +1,6 @@
 import torch
 import torch.nn as nn
-import args
-from Data_Load import load_vocab, load_char_data
-from torch.utils.data import DataLoader, Dataset
-from torch.autograd import Variable
+from Our_code import args
 
 
 # initialize a class containing the DSSM model

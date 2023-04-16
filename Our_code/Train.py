@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, Dataset
 from torch.autograd import Variable
-from Data_Load import load_char_data
-from DSSM import DSSM
-import args
+from Our_code.Data_Load import load_char_data
+from Our_code.DSSM import DSSM
+from Our_code import args
 
 
 # define the training dataset

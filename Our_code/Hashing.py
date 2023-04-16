@@ -1,4 +1,4 @@
-import args
+from Our_code import args
 
 
 # create N_gram vector given a word
@@ -30,7 +30,7 @@ for file in files:
         vocab.extend(lst_gram(s1))
         vocab.extend(lst_gram(s2))
 
-vocab = set(vocab) # clean list to be a non_duplicate set
+vocab = set(vocab)  # clean list to be a non_duplicate set
 vocab_list = ['[PAD]', '[UNK]']
 vocab_list.extend(list(vocab))
 
