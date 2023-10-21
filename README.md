@@ -36,7 +36,7 @@ Process:
 
 
 ## 4. DSSM Structure
-<img src="https://github.com/WeijianShi/Industry_Project_NLP/blob/main/Image/Flowchart.jpeg">
+<img src="https://github.com/WeijianShi/DSSM_Research/blob/main/Data/DSSM.jpg">
 
 
 
